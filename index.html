@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    function countSame(arr){
+    const occurcess = {};
+
+    for(let i = 0; i < arr.length ; i++ ){
+        let value = arr[i];
+
+        if(occurcess[value]){
+            occurcess[value]++;
+        }else{
+            occurcess[value]=1;
+        }
+    }
+    return occurcess;
+}
+
+
+
+function countOccurrence(arr) {
+    const result = {};
+    for (let i = 0; i < arr.length; i++) {
+      const value = arr[i];
+  
+      if (result.hasOwnProperty(value)) {
+        result[value]++;
+      } else {
+        result[value] = 1;
+      }
+    }
+    return result;
+  }
+  
+
+
+
+  const array = ['a', 'b', 'c', 'de', 'a'];
+    var result = countSame(array);
+    var result_2 = countOccurrence(array);
+
+
+console.log(result);
+console.log("hasOwnProperty ilə yoxlanıldı",result_2);
+
+document.write(JSON.stringify(result));
+document.write(("<br>"));
+document.write(JSON.stringify(result_2));
+
+
+
+</script>
+
+</body>
+</html>
