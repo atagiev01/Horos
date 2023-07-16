@@ -6,54 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+
 <script>
-    function countSame(arr){
-    const occurcess = {};
+var coordinateX= 3;
+var coordinateY = 5;
 
-    for(let i = 0; i < arr.length ; i++ ){
-        let value = arr[i];
+const coordinates = [
+  [-3, -5],
+  [-3, 5],
+  [3, -5],
+  [3, 5],
+];
 
-        if(occurcess[value]){
-            occurcess[value]++;
-        }else{
-            occurcess[value]=1;
-        }
-    }
-    return occurcess;
-}
+for (var i = 0; i < coordinates.length; i++) {
 
-
-
-function countOccurrence(arr) {
-    const result = {};
-    for (let i = 0; i < arr.length; i++) {
-      const value = arr[i];
+  var x = coordinates[i][0];
+  var y = coordinates[i][1];
   
-      if (result.hasOwnProperty(value)) {
-        result[value]++;
-      } else {
-        result[value] = 1;
-      }
-    }
-    return result;
+  if (x === coordinateX && y === coordinateY) {
+    console.log("Doğru olan koordinat: " , x , y);
+  }else{
+    console.log("Yanlış olan koordinat: " , x , y);
   }
-  
-
-
-
-  const array = ['a', 'b', 'c', 'de', 'a'];
-    var result = countSame(array);
-    var result_2 = countOccurrence(array);
-
-
-console.log(result);
-console.log("hasOwnProperty ilə yoxlanıldı",result_2);
-
-document.write(JSON.stringify(result));
-document.write(("<br>"));
-document.write(JSON.stringify(result_2));
-
+}
 
 
 </script>
