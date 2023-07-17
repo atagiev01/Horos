@@ -12,22 +12,30 @@
 var coordinateX= 3;
 var coordinateY = 5;
 
-const coordinates = [
-  [-3, -5],
-  [-3, 5],
-  [3, -5],
-  [3, 5],
-];
+const coordinates = {
+  1:{
+    x:3,y:5
+  },
+  2:{
+    x:-3,y:5
+  },
+  3:{
+    x:3,y:-5
+  },
+  4:{
+    x:-3,y:-5
+  }
+}
 
-for (var i = 0; i < coordinates.length; i++) {
-
-  var x = coordinates[i][0];
-  var y = coordinates[i][1];
+for (let i in coordinates) {
+  let coordinate = coordinates[i];
+  let x = coordinate.x;
+  let y = coordinate.y;
   
   if (x === coordinateX && y === coordinateY) {
-    console.log("Doğru olan koordinat: " , x , y);
-  }else{
-    console.log("Yanlış olan koordinat: " , x , y);
+    console.log(i , true , x , y);
+  } else {
+    console.log(i, false , x , y);
   }
 }
 
